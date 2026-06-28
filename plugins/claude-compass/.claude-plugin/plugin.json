@@ -5,8 +5,8 @@
   "author": {
     "name": "ClaudeCompass"
   },
-  "homepage": "https://github.com/ganis/ClaudeCompass",
-  "repository": "https://github.com/ganis/ClaudeCompass",
+  "homepage": "https://github.com/ganeshparsads/ClaudeCompass",
+  "repository": "https://github.com/ganeshparsads/ClaudeCompass",
   "license": "MIT",
   "keywords": [
     "claude-code",
@@ -17,4 +17,3 @@
     "memory"
   ]
 }
-

@@ -28,7 +28,7 @@ ClaudeCompass is meant to feel like one connector that turns Claude Code from a 
 
 ```bash
 claude plugin marketplace add ./ClaudeCompass
-claude plugin install claude-compass@ClaudeCompass
+claude plugin install claude-compass@claude-compass
 ```
 
 Then in Claude Code:

@@ -1,7 +1,7 @@
 {
-  "name": "ClaudeCompass Marketplace",
+  "name": "claude-compass",
   "owner": {
-    "name": "ClaudeCompass"
+    "name": "ganeshparsads"
   },
   "plugins": [
     {
@@ -11,4 +11,3 @@
     }
   ]
 }
-
