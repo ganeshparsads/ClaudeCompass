@@ -1,0 +1,56 @@
+<svg width="1280" height="520" viewBox="0 0 1280 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ClaudeCompass install flow</title>
+  <desc id="desc">A five step guided install flow from plugin install to verified Claude Code memory stack.</desc>
+  <rect width="1280" height="520" fill="#F7F4EE"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="64" y="78" fill="#111820" font-size="48" font-weight="800">One install, one stack</text>
+    <text x="66" y="116" fill="#59636E" font-size="22" font-weight="500">ClaudeCompass automates the setup path and calls out the few OS approvals that must stay human.</text>
+  </g>
+  <g transform="translate(64 178)" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <g>
+      <rect width="202" height="190" rx="18" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="2"/>
+      <circle cx="40" cy="42" r="18" fill="#111820"/>
+      <text x="34" y="50" fill="#FFFFFF" font-size="22" font-weight="800">1</text>
+      <text x="24" y="88" fill="#111820" font-size="24" font-weight="800">Install</text>
+      <text x="24" y="122" fill="#59636E" font-size="17">Add marketplace</text>
+      <text x="24" y="148" fill="#59636E" font-size="17">Install plugin</text>
+    </g>
+    <path d="M220 95H278" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round"/>
+    <path d="M268 83L280 95L268 107" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(298 0)">
+      <rect width="202" height="190" rx="18" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="2"/>
+      <circle cx="40" cy="42" r="18" fill="#65D1AA"/>
+      <text x="34" y="50" fill="#0D231B" font-size="22" font-weight="800">2</text>
+      <text x="24" y="88" fill="#111820" font-size="24" font-weight="800">Bootstrap</text>
+      <text x="24" y="122" fill="#59636E" font-size="17">Node, Python</text>
+      <text x="24" y="148" fill="#59636E" font-size="17">Graphify, ccusage</text>
+    </g>
+    <path d="M518 95H576" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round"/>
+    <path d="M566 83L578 95L566 107" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(596 0)">
+      <rect width="202" height="190" rx="18" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="2"/>
+      <circle cx="40" cy="42" r="18" fill="#BBA7FF"/>
+      <text x="34" y="50" fill="#1E1548" font-size="22" font-weight="800">3</text>
+      <text x="24" y="88" fill="#111820" font-size="24" font-weight="800">Connect</text>
+      <text x="24" y="122" fill="#59636E" font-size="17">Obsidian vault</text>
+      <text x="24" y="148" fill="#59636E" font-size="17">MCP template</text>
+    </g>
+    <path d="M816 95H874" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round"/>
+    <path d="M864 83L876 95L864 107" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <g transform="translate(894 0)">
+      <rect width="202" height="190" rx="18" fill="#FFFFFF" stroke="#D8D2C6" stroke-width="2"/>
+      <circle cx="40" cy="42" r="18" fill="#F4C95D"/>
+      <text x="34" y="50" fill="#3A2B00" font-size="22" font-weight="800">4</text>
+      <text x="24" y="88" fill="#111820" font-size="24" font-weight="800">Approve</text>
+      <text x="24" y="122" fill="#59636E" font-size="17">OS prompts</text>
+      <text x="24" y="148" fill="#59636E" font-size="17">Plugin trust</text>
+    </g>
+    <path d="M1114 95H1172" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round"/>
+    <path d="M1162 83L1174 95L1162 107" stroke="#9BA6AE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(1058 355)" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <rect width="154" height="78" rx="16" fill="#111820"/>
+    <text x="28" y="34" fill="#F7F4EE" font-size="18" font-weight="800">Verified</text>
+    <text x="28" y="58" fill="#BFD0C9" font-size="15">/doctor passes</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">ClaudeCompass product banner</title>
+  <desc id="desc">ClaudeCompass connects Claude Code to memory, token visibility, Obsidian, Graphify, MCP, hooks, and safer setup.</desc>
+  <rect width="1280" height="640" fill="#0E1116"/>
+  <path d="M0 492C142 440 262 449 384 483C530 524 660 525 811 455C954 389 1092 371 1280 430V640H0V492Z" fill="#13231F"/>
+  <path d="M0 538C145 486 286 500 433 540C578 579 711 580 861 522C1005 466 1125 460 1280 502V640H0V538Z" fill="#1E2B37"/>
+  <circle cx="640" cy="294" r="100" fill="#F4C95D"/>
+  <circle cx="640" cy="294" r="74" fill="#0E1116"/>
+  <path d="M640 182L668 294L640 406L612 294L640 182Z" fill="#F4C95D"/>
+  <path d="M528 294L640 266L752 294L640 322L528 294Z" fill="#F4C95D"/>
+  <circle cx="640" cy="294" r="18" fill="#F4C95D"/>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+    <text x="80" y="122" fill="#F5F1E8" font-size="72" font-weight="800">ClaudeCompass</text>
+    <text x="84" y="172" fill="#B8C7C0" font-size="27" font-weight="500">One guided connector for Claude Code memory, token visibility, and safer setup.</text>
+  </g>
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="700">
+    <g transform="translate(118 248)">
+      <rect width="210" height="92" rx="16" fill="#172026" stroke="#33515A" stroke-width="2"/>
+      <circle cx="46" cy="46" r="20" fill="#65D1AA"/>
+      <text x="82" y="54" fill="#EAF2EF">Graphify</text>
+    </g>
+    <g transform="translate(952 248)">
+      <rect width="210" height="92" rx="16" fill="#172026" stroke="#33515A" stroke-width="2"/>
+      <circle cx="46" cy="46" r="20" fill="#BBA7FF"/>
+      <text x="82" y="54" fill="#EAF2EF">Obsidian</text>
+    </g>
+    <g transform="translate(208 400)">
+      <rect width="210" height="92" rx="16" fill="#172026" stroke="#33515A" stroke-width="2"/>
+      <circle cx="46" cy="46" r="20" fill="#F4C95D"/>
+      <text x="82" y="54" fill="#EAF2EF">Tokens</text>
+    </g>
+    <g transform="translate(862 400)">
+      <rect width="210" height="92" rx="16" fill="#172026" stroke="#33515A" stroke-width="2"/>
+      <circle cx="46" cy="46" r="20" fill="#7EC8F5"/>
+      <text x="82" y="54" fill="#EAF2EF">MCP</text>
+    </g>
+    <g transform="translate(535 474)">
+      <rect width="210" height="92" rx="16" fill="#172026" stroke="#33515A" stroke-width="2"/>
+      <circle cx="46" cy="46" r="20" fill="#FF9A76"/>
+      <text x="82" y="54" fill="#EAF2EF">Hooks</text>
+    </g>
+  </g>
+  <g stroke="#5F7F85" stroke-width="3" stroke-linecap="round" opacity=".85">
+    <path d="M328 294C422 274 486 273 540 286"/>
+    <path d="M740 286C792 273 858 274 952 294"/>
+    <path d="M418 446C482 426 530 384 590 344"/>
+    <path d="M862 446C798 426 750 384 690 344"/>
+    <path d="M640 474V394"/>
+  </g>
+</svg>
+

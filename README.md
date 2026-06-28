@@ -1,5 +1,7 @@
 # ClaudeCompass
 
+![ClaudeCompass product banner](assets/claude-compass-hero.svg)
+
 ClaudeCompass is a Claude Code connector/plugin starter that aims to make Claude easier for end users by installing and wiring the memory stack in one guided flow:
 
 - Graphify for graph-first project memory and token reduction.
@@ -9,6 +11,18 @@ ClaudeCompass is a Claude Code connector/plugin starter that aims to make Claude
 - A doctor command that verifies what is installed and what still needs user approval.
 
 This repo is intentionally honest about OS permissions: macOS and Windows may still require the user to approve privacy/security prompts. ClaudeCompass can open the path and configure the stack, but it should not bypass OS consent.
+
+![ClaudeCompass install flow](assets/install-flow.svg)
+
+## What It Gives Users
+
+ClaudeCompass is meant to feel like one connector that turns Claude Code from a raw terminal agent into a configured workspace companion:
+
+- It remembers project context through Graphify and a human-readable Obsidian vault.
+- It shows token and cost usage without asking users to remember commands.
+- It prepares MCP config for Obsidian and Graphify.
+- It adds conservative Claude Code permission defaults.
+- It gives users `/setup`, `/doctor`, `/tokens`, `/memory`, and `/uninstall` entry points.
 
 ## Install from Local Checkout
 
