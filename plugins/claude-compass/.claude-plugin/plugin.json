@@ -1,0 +1,20 @@
+{
+  "name": "claude-compass",
+  "version": "0.1.0",
+  "description": "A guided Claude Code connector for memory, token visibility, Obsidian, Graphify, MCP, and project setup.",
+  "author": {
+    "name": "ClaudeCompass"
+  },
+  "homepage": "https://github.com/ganis/ClaudeCompass",
+  "repository": "https://github.com/ganis/ClaudeCompass",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "obsidian",
+    "graphify",
+    "mcp",
+    "tokens",
+    "memory"
+  ]
+}
+

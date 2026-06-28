@@ -1,0 +1,14 @@
+{
+  "name": "ClaudeCompass Marketplace",
+  "owner": {
+    "name": "ClaudeCompass"
+  },
+  "plugins": [
+    {
+      "name": "claude-compass",
+      "source": "./plugins/claude-compass",
+      "description": "One guided install for Claude Code memory, token visibility, Obsidian, Graphify, and safer project defaults."
+    }
+  ]
+}
+
