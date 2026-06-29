@@ -1,6 +1,6 @@
 {
   "name": "claude-compass",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A guided Claude Code connector for memory, token visibility, Obsidian, Graphify, MCP, and project setup.",
   "author": {
     "name": "ClaudeCompass"

@@ -34,9 +34,9 @@ claude plugin install claude-compass@claude-compass
 Then in Claude Code:
 
 ```text
-/setup
-/doctor
-/tokens
+/claude-compass:setup
+/claude-compass:doctor
+/claude-compass:tokens
 ```
 
 ## Bootstrap Directly
@@ -65,6 +65,7 @@ The first implementation focuses on:
 - token monitor statusline
 - MCP config template
 - setup, doctor, memory, token, and uninstall skills
+- graceful Graphify fallback when the package is unavailable
 
 ## Roadmap
 

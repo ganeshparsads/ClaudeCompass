@@ -68,17 +68,23 @@ install_graphify() {
     return
   fi
 
+  log "Attempting Graphify install. This is optional and setup will continue if Graphify is unavailable."
   if has uvx; then
-    log "Installing Graphify with uv tool."
-    uv tool install graphify || uvx graphify --help >/dev/null
+    uv tool install graphify 2>/dev/null || warn "uv could not install Graphify."
   elif has pipx; then
-    log "Installing Graphify with pipx."
-    pipx install graphify
+    pipx install graphify 2>/dev/null || warn "pipx could not install Graphify."
   else
-    log "Installing pipx and Graphify."
-    brew install pipx
-    pipx ensurepath
-    pipx install graphify
+    brew install pipx 2>/dev/null || warn "Could not install pipx."
+    if has pipx; then
+      pipx ensurepath 2>/dev/null || true
+      pipx install graphify 2>/dev/null || warn "pipx could not install Graphify."
+    fi
+  fi
+
+  if has graphify; then
+    log "Graphify installed."
+  else
+    warn "Graphify is not available through the detected package managers. Skipping Graphify and continuing setup."
   fi
 }
 
@@ -88,8 +94,23 @@ install_token_monitor() {
     return
   fi
 
-  log "Installing ccusage globally."
-  npm install -g ccusage
+  log "Installing ccusage."
+  if npm install -g ccusage 2>/dev/null; then
+    log "ccusage installed globally."
+    return
+  fi
+
+  # Fall back to user-local prefix to avoid needing sudo.
+  local npm_prefix="${HOME}/.npm-global"
+  mkdir -p "${npm_prefix}"
+  npm install -g ccusage --prefix "${npm_prefix}" 2>/dev/null || true
+
+  if [[ -x "${npm_prefix}/bin/ccusage" ]]; then
+    log "ccusage installed at ${npm_prefix}/bin/ccusage."
+    warn "Add ${npm_prefix}/bin to your PATH to use ccusage from any terminal."
+  else
+    warn "ccusage install failed. Run: npm install -g ccusage (may need sudo or PATH config)."
+  fi
 }
 
 write_compass_files() {
@@ -153,6 +174,8 @@ configure_graphify() {
   if has graphify; then
     log "Running Graphify Claude installer if available."
     graphify claude install || graphify install || warn "Graphify installed, but automatic Claude configuration did not complete."
+  else
+    warn "Graphify command not found. ClaudeCompass memory vault and token setup still completed."
   fi
 }
 
@@ -162,7 +185,7 @@ print_next_steps() {
 ClaudeCompass installed.
 
 What is automatic:
-- Graphify install/config attempt
+- Graphify install/config attempt when available
 - Obsidian app install
 - Claude Code statusline token monitor
 - Claude settings merge with backup
@@ -175,8 +198,8 @@ What may still require user clicks:
 
 Run:
   claude
-  /doctor
-  /tokens
+  /claude-compass:doctor
+  /claude-compass:tokens
 
 EOF
 }

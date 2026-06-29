@@ -43,8 +43,12 @@ if (-not (Test-Command ccusage)) {
 }
 
 if (-not (Test-Command graphify)) {
-  Write-Compass "Installing Graphify."
-  pip install --user graphify
+  Write-Compass "Attempting Graphify install. This is optional and setup will continue if Graphify is unavailable."
+  try {
+    pip install --user graphify
+  } catch {
+    Write-Warning "Graphify is not available through pip. Skipping Graphify and continuing setup."
+  }
 }
 
 @"
@@ -56,4 +60,3 @@ Created: $(Get-Date)
 "@ | Set-Content -Path "$VaultPath\ClaudeCompass\README.md"
 
 Write-Compass "Installed. You may still need to approve Windows security prompts and enable the Obsidian Local REST API plugin."
-
