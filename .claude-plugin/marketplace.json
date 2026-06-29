@@ -1,5 +1,8 @@
 {
   "name": "claude-compass",
+  "metadata": {
+    "description": "ClaudeCompass plugins for Claude Code memory, token visibility, Obsidian, Graphify, and safer setup."
+  },
   "owner": {
     "name": "ganeshparsads"
   },
