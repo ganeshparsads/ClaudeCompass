@@ -28,6 +28,8 @@ ClaudeCompass is meant to feel like one connector that turns Claude Code from a 
 
 ## How It Saves Tokens
 
+![Animated token flow through CodeGraph, Headroom, and Caveman](assets/token-flow.svg)
+
 Each plugin targets a different token "leak," so their savings stack across the same task instead of competing. Figures below are **self-reported by each open-source project** under their own benchmarks:
 
 | Where tokens leak | Plugin | Reported savings |
