@@ -88,6 +88,59 @@ install_graphify() {
   fi
 }
 
+install_codegraph() {
+  if has codegraph; then
+    log "CodeGraph found."
+  else
+    log "Installing CodeGraph."
+    npm install -g @colbymchenry/codegraph 2>/dev/null || warn "Could not install CodeGraph globally. Run: npm i -g @colbymchenry/codegraph"
+  fi
+
+  if has codegraph; then
+    log "Wiring CodeGraph MCP server into Claude Code."
+    codegraph install 2>/dev/null || warn "CodeGraph MCP wiring did not complete. Run: codegraph install"
+  fi
+}
+
+install_caveman() {
+  local marker="${COMPASS_HOME}/.caveman-installed"
+  if [[ -f "${marker}" ]]; then
+    log "Caveman already installed by ClaudeCompass."
+    return
+  fi
+
+  log "Installing Caveman (output-token compression skill). Auto-detects Claude Code."
+  if curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash; then
+    mkdir -p "${COMPASS_HOME}"
+    date > "${marker}"
+    log "Caveman installed. Enable with /caveman."
+  else
+    warn "Caveman install did not complete. Run: curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash"
+  fi
+}
+
+install_headroom() {
+  if has headroom; then
+    log "Headroom found."
+  else
+    log "Installing Headroom (input/context compression)."
+    if has uv; then
+      uv tool install --python 3.13 "headroom-ai[all]" 2>/dev/null || warn "uv could not install Headroom."
+    elif has pipx; then
+      pipx install "headroom-ai[all]" 2>/dev/null || warn "pipx could not install Headroom."
+    elif has pip3; then
+      pip3 install --user "headroom-ai[all]" 2>/dev/null || warn "pip could not install Headroom."
+    else
+      warn "No uv/pipx/pip found for Headroom. Run: uv tool install --python 3.13 \"headroom-ai[all]\""
+    fi
+  fi
+
+  if has headroom; then
+    log "Wiring Headroom MCP server into Claude Code."
+    headroom mcp install 2>/dev/null || warn "Headroom MCP wiring did not complete. Run: headroom mcp install"
+  fi
+}
+
 install_token_monitor() {
   if has ccusage; then
     log "ccusage found."
@@ -186,6 +239,9 @@ ClaudeCompass installed.
 
 What is automatic:
 - Graphify install/config attempt when available
+- CodeGraph install + MCP wiring + per-session index sync
+- Caveman output-token compression skill
+- Headroom input/context compression + MCP wiring
 - Obsidian app install
 - Claude Code statusline token monitor
 - Claude settings merge with backup
@@ -209,6 +265,9 @@ main() {
   install_package_managers
   install_obsidian
   install_graphify
+  install_codegraph
+  install_caveman
+  install_headroom
   install_token_monitor
   write_compass_files
   merge_claude_settings

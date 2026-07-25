@@ -51,6 +51,39 @@ if (-not (Test-Command graphify)) {
   }
 }
 
+if (-not (Test-Command codegraph)) {
+  Write-Compass "Installing CodeGraph."
+  npm install -g "@colbymchenry/codegraph"
+}
+if (Test-Command codegraph) {
+  Write-Compass "Wiring CodeGraph MCP server into Claude Code."
+  try { codegraph install } catch { Write-Warning "CodeGraph MCP wiring did not complete. Run: codegraph install" }
+}
+
+$CavemanMarker = "$CompassHome\.caveman-installed"
+if (-not (Test-Path $CavemanMarker)) {
+  Write-Compass "Installing Caveman (output-token compression skill). Auto-detects Claude Code."
+  try {
+    irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex
+    Get-Date | Set-Content -Path $CavemanMarker
+  } catch {
+    Write-Warning "Caveman install did not complete. See https://github.com/JuliusBrussee/caveman"
+  }
+}
+
+if (-not (Test-Command headroom)) {
+  Write-Compass "Installing Headroom (input/context compression)."
+  if (Test-Command uv) {
+    try { uv tool install --python 3.13 "headroom-ai[all]" } catch { Write-Warning "uv could not install Headroom." }
+  } else {
+    try { pip install --user "headroom-ai[all]" } catch { Write-Warning "pip could not install Headroom." }
+  }
+}
+if (Test-Command headroom) {
+  Write-Compass "Wiring Headroom MCP server into Claude Code."
+  try { headroom mcp install } catch { Write-Warning "Headroom MCP wiring did not complete. Run: headroom mcp install" }
+}
+
 @"
 # ClaudeCompass Vault
 
