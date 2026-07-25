@@ -1,16 +1,26 @@
 {
   "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/codegraph-sync.sh"
+          }
+        ]
+      }
+    ],
     "Stop": [
       {
         "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "hooks/session-summary.sh"
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/session-summary.sh"
           }
         ]
       }
     ]
   }
 }
-
