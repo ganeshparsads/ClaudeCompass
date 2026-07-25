@@ -1,7 +1,7 @@
 {
   "name": "claude-compass",
   "metadata": {
-    "description": "ClaudeCompass plugins for Claude Code memory, token visibility, Obsidian, Graphify, and safer setup."
+    "description": "ClaudeCompass plugins for Claude Code memory, token visibility, Obsidian, Graphify, CodeGraph, Caveman, Headroom, and safer setup."
   },
   "owner": {
     "name": "ganeshparsads"
@@ -10,7 +10,7 @@
     {
       "name": "claude-compass",
       "source": "./plugins/claude-compass",
-      "description": "One guided install for Claude Code memory, token visibility, Obsidian, Graphify, and safer project defaults."
+      "description": "One guided install for Claude Code memory, token visibility, Obsidian, Graphify, CodeGraph, Caveman, Headroom, and safer project defaults."
     }
   ]
 }

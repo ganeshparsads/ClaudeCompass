@@ -12,7 +12,9 @@
       "Bash(npm run lint:*)",
       "Bash(npm run typecheck:*)",
       "Bash(npx ccusage:*)",
-      "Bash(graphify:*)"
+      "Bash(graphify:*)",
+      "Bash(codegraph:*)",
+      "Bash(headroom:*)"
     ],
     "deny": [
       "Bash(rm -rf /:*)",

@@ -17,7 +17,15 @@ check "npm" "npm"
 check "Python" "python3"
 check "uv" "uv"
 check "Graphify" "graphify"
+check "CodeGraph" "codegraph"
+check "Headroom" "headroom"
 check "ccusage" "ccusage"
+
+if [[ -f "${HOME}/.claude/claude-compass/.caveman-installed" ]]; then
+  printf "ok   Caveman: installed by ClaudeCompass (use /caveman)\n"
+else
+  printf "miss Caveman: not installed by ClaudeCompass (run /claude-compass:setup)\n"
+fi
 
 if [[ -d "/Applications/Obsidian.app" ]]; then
   printf "ok   Obsidian: /Applications/Obsidian.app\n"
